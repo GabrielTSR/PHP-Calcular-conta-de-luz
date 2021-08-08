@@ -1,14 +1,10 @@
-<html>
-    <head>
-    <link rel="stylesheet" href="styles.css" />
-    </head>
-</html>
-
 <?php
 
 if (
-    isset($_POST["nome"]) && isset($_POST["consumoQuilowattsHora"])
-    && isset($_POST["rua"]) && isset($_POST["numeroRua"])
+    isset($_POST['nome']) &&
+    isset($_POST['consumoQuilowattsHora']) &&
+    isset($_POST['rua']) &&
+    isset($_POST['numeroRua'])
 ) {
 
     $nome = $_POST["nome"];
@@ -18,9 +14,12 @@ if (
 
     if ($rua[0] == 'R' && 
         $rua[1] == 'u' &&
-        $rua[2] == 'a' ) {
+        $rua[2] == 'a' &&
+        $rua[3] == ' '
+        ) {
 
             $rua = str_replace('Rua', '', $rua);
+            $rua = ucwords($rua);
 
 
 
