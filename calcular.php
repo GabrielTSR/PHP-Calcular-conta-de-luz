@@ -49,15 +49,17 @@ if (
 </head>
 
 <body>
-    <h1>Conta de luz de <?= $nome ?>.</h1>
-    <p> Rua <?= $rua ?>, <?= $numeroRua ?>.</p>
-    <p class="<?= $colorClass ?>">Consumo: <span class="letra-grande"><?= $consumoQuilowattsHora ?>kWh</span>.</p>
-    <p>Valor a pagar: R$ <span class="letra-grande-plus"><?= $valor ?></span>.</p>
-    <?php
+    <div id="circle-result-container">
+        <h1>Conta de luz de <?= $nome ?>.</h1>
+        <p> Rua <?= $rua ?>, <?= $numeroRua ?>.</p>
+        <p class="<?= $colorClass ?>">Consumo: <span class="letra-grande"><?= $consumoQuilowattsHora ?>kWh</span>.</p>
+        <p>Valor a pagar: R$ <span class="letra-grande-plus"><?= $valor ?></span>.</p>
+        <?php
         if ($economizou) {
             echo"Obrigado por economizar!";
         }
-    ?>
+        ?>
+    </div>
 </body>
 
 </html>
@@ -67,4 +69,5 @@ if (
 } else {
 
     echo "<h1>Você não enviou as informações corretamente</h1>";
+    exit;
 }
