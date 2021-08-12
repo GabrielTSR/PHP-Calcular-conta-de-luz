@@ -35,13 +35,9 @@ if (
         $valor = number_format($consumoQuilowattsHora * 0.32, 2, ',' , '.');
         $economizou = true;
     }
-    
-} else {
+    ?>
 
-    echo "<h1>Você não enviou as informações corretamente</h1>";
-}
-?>
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -65,3 +61,10 @@ if (
 </body>
 
 </html>
+
+<?php
+    
+} else {
+
+    echo "<h1>Você não enviou as informações corretamente</h1>";
+}
