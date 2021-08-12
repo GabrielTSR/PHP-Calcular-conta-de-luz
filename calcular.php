@@ -16,9 +16,16 @@ if (
         $rua[1] == 'u' &&
         $rua[2] == 'a' &&
         $rua[3] == ' '
+
+        ||
+
+        $rua[0] == 'R' &&
+        $rua[1] == '.'
+
         ) {
 
             $rua = str_replace('Rua', '', $rua);
+            $rua = str_replace('R.', '', $rua);
             $rua = ucwords($rua);
 
 
