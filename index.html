@@ -13,16 +13,16 @@
     <form method="POST" action="./calcular.php">
         <h1>Calculadora de conta de luz</h1>
         <label for="nome">Nome completo:</label>
-        <input id="nome" name="nome" />
+        <input id="nome" name="nome" required/>
 
         <label for="consumoQuilowattsHora">Consumo em Quilowatts por hora:</label>
-        <input id="consumoQuilowattsHora" name="consumoQuilowattsHora" />
+        <input type="number" id="consumoQuilowattsHora" name="consumoQuilowattsHora" required/>
 
         <label for="rua">Rua:</label>
-        <input id="rua" name="rua" />
+        <input id="rua" name="rua" required/>
 
         <label for="numeroRua">Número (do endereço)</label>
-        <input id="numeroRua" name="numeroRua" />
+        <input type="number" id="numeroRua" name="numeroRua" required/>
 
         <button>Calcular</button>
     </form>
